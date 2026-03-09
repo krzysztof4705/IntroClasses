@@ -1,9 +1,9 @@
 ﻿using IntroClasses;
 
-
+bool isPlaynig = true;
 Player hero = new Player();
 hero.Display();
-while (true)
+while (isPlaynig)
 {
     ConsoleKeyInfo input = Console.ReadKey(true);
     switch (input.Key)
@@ -20,7 +20,11 @@ while (true)
         case ConsoleKey.D:
             hero.Move(1, 0);
             break;
+        case ConsoleKey.Q:
+            isPlaynig = false;
+            break;
     }
 
     hero.Display();
 }
+Console.WriteLine("Goodbye!");
