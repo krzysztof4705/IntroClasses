@@ -2,19 +2,19 @@ namespace IntroClasses;
 
 public class Player
 {
-    private int x;
-    private int y;
-    private string avatar = "@";
+    private int _x;
+    private int _y;
+    private string _avatar = "@";
 
     public void Display()
     {
-        Console.WriteLine(avatar);
-        Console.WriteLine($"Position: {x}, {y}");
+        Console.WriteLine(_avatar);
+        Console.WriteLine($"Position: {_x}, {_y}");
     }
 
     public void Move(int diffX, int diffY)
     {
-        x += diffX;
-        y += diffY;
+        _x += diffX;
+        _y += diffY;
     }
 }
