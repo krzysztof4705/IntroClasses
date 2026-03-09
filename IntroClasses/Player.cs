@@ -8,8 +8,8 @@ public class Player
 
     public void Display()
     {
-        Console.WriteLine(_avatar);
-        Console.WriteLine($"Position: {_x}, {_y}");
+        Console.SetCursorPosition(_x,_y);
+        Console.Write(_avatar);
     }
 
     public void Move(int diffX, int diffY)
