@@ -5,6 +5,6 @@ Player hero = new Player();
 hero.Display();
 while (isPlaynig)
 {
-    hero.TakeTurn();
+   isPlaynig = hero.TakeTurn();
 }
 Console.WriteLine("Goodbye!");
