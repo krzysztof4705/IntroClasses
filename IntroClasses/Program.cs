@@ -2,16 +2,23 @@
 
 bool isPlaynig = true;
 Vector2D startingPosition = new Vector2D(4, 2);
-Player hero = new Player(startingPosition);
+Character hero = new Player(startingPosition);
 startingPosition.X = 0;
 startingPosition.Y = 0;
 // startingPosition = new Vector2D(0, 0);
-Player anotherHero = new Player(startingPosition);
-hero.Display();
-anotherHero.Display();
+Character anotherHero = new NPC(startingPosition);
+List<Character> characters= [ hero, anotherHero];
+
+foreach (Character character in characters)
+{
+   character.Display();
+}
 while (isPlaynig)
 {
-   isPlaynig = hero.TakeTurn();
-   isPlaynig = anotherHero.TakeTurn();
+   foreach(Character character in characters)
+   {
+       character.TakeTurn();
+
+   }
 }
 Console.WriteLine("Goodbye!");
